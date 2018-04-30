@@ -6,6 +6,7 @@ const filename = "vue.mapper.spice.js";
 const webpack = require('webpack');
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 /* */
 
@@ -24,6 +25,17 @@ module.exports = {
 		 'node_modules'
 		]
 	},
+	module: {
+		rules: [
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+				  loader: "babel-loader"
+				}
+			}
+		]
+	},
 	plugins:[
 		new CopyWebpackPlugin([
 	        { from: './src/index.html' },
@@ -31,6 +43,7 @@ module.exports = {
 	    ]),
 		new webpack.NamedModulesPlugin(),
 		new webpack.optimize.OccurrenceOrderPlugin(true),
+		new DashboardPlugin()
 	],
 	devServer: {
 	  contentBase: './dist',
