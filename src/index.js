@@ -1,5 +1,7 @@
 //@flow
 
-console.log('ehasdasd')
+console.log('ehasdas2d');
 
 window.steve = {};
+
+let number:string = '';

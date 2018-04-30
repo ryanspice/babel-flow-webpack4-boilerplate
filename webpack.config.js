@@ -1,7 +1,7 @@
 
 /* */
 
-const filename = "vue.mapper.spice.js";
+const filename = "babel-flow-webpack4-boilerplate";
 
 const webpack = require('webpack');
 const path = require('path');
