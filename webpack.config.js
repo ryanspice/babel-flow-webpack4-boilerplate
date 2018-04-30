@@ -30,7 +30,7 @@ module.exports = {
 	        { from: './src/images', to:'./images/' }
 	    ]),
 		new webpack.NamedModulesPlugin(),
-		new webpack.optimize.OccurrenceOrderPlugin(true)
+		new webpack.optimize.OccurrenceOrderPlugin(true),
 	],
 	devServer: {
 	  contentBase: './dist',
@@ -48,7 +48,7 @@ module.exports = {
 		version: false,
 		warnings: true,
 		colors: {
-			  green: '\u001b[32m',
+			  green: '\u001B[36m',
 			}
 		}
 	}
