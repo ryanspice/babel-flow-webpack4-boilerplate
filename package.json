@@ -5,7 +5,7 @@
 	"private": true,
 	"author": "Ryan Tyler Spice-Finnie",
 	"scripts": {
-		"dev": "webpack-dev-server",
+		"dev": "webpack -watch -- webpack-dev-server",
 		"dash": "webpack-dashboard -- webpack-dev-server",
 		"prod": "webpack"
 	},
